@@ -39,7 +39,7 @@ $(OUTPUT): $(OBJECTS) | $(BUILD_DIRECTORY)
 
 # Compiles all the source files into object files
 $(BUILD_DIRECTORY)/%.o: $(SOURCE_DIRECTORY)/%.cpp | $(BUILD_DIRECTORY)
-	$(CXX) -c $(CXXFLAGS) $< -o $@
+	$(CXX) -c $(CXXFLAGS) $(CPPFLAGS) $< -o $@
 
 # Ensures the output directory exists
 $(BUILD_DIRECTORY):
